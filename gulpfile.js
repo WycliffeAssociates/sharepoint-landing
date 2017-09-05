@@ -13,7 +13,12 @@ gulp.task('css', function(){
   return gulp.src('src/style/*.css')
     // .pipe(less())
     .pipe(minifyCSS())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('build/style'))
 });
 
-gulp.task('default', [ 'index', 'css' ]);
+gulp.task('image', function() {
+  return gulp.src('src/img/*.*')
+  .pipe(gulp.dest('build/img'))
+});
+
+gulp.task('default', [ 'index', 'css', 'image' ]);
