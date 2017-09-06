@@ -2,20 +2,15 @@ This is a very basic single-page, static site generator for SharePoint landing p
 
 # Architecture
 
-Server/Host/CDN: [Netlify](https://netlify.com)
-CMS: [Contentful](https://contentful.com)
-Generator (this repo): [Gulp](https://gulpjs.com) + [Mustache](https://mustache.github.io/)
+- Server/Host/CDN: [Netlify](https://netlify.com)
+- CMS: [Contentful](https://contentful.com)
+- Generator (this repo): [Gulp](https://gulpjs.com) + [Mustache](https://mustache.github.io/)
 
 # Running Locally
 
-## Prerequisite
+1. Make sure you have the prerequisites: [Node](https://nodejs.org), [Gulp](https://gulpjs.com), [Git](https://git-scm.com/)
 
-- [Node](https://nodejs.org)
-- [Gulp](https://gulpjs.com)
-
-## Getting Started
-
-1. Clone this repo.
+2. Clone this repo.
 
 ```
 $ git clone https://github.com/WycliffeAssociates/sharepoint-landing.git
@@ -23,14 +18,14 @@ $ git clone https://github.com/WycliffeAssociates/sharepoint-landing.git
 $ git clone git@github.com:WycliffeAssociates/sharepoint-landing.git
 ```
 
-2. Install the dependencies.
+3. Install the dependencies.
 
 ```
 $ npm i
 ```
 
-3. Make changes to the files in `src` directory.
-4. Build locally.
+4. Make changes to the files in `src` directory.
+5. Build locally.
 
 ```
 $ gulp
