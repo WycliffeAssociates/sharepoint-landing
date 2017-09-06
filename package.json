@@ -10,8 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "contentful": "^4.6.1",
+    "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-csso": "^3.0.0"
+    "gulp-csso": "^3.0.0",
+    "gulp-mustache": "^3.0.0"
   },
   "dependencies": {}
 }
