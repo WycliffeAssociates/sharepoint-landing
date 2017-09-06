@@ -10,16 +10,28 @@ const client = contentful.createClient({
   accessToken: process.env.ACCESS_TOKEN
 });
 
+function compareText(firstLink, secondLink) {
+  const firstText = firstLink.text.toLowerCase();
+  const secondText = secondLink.text.toLowerCase();
+
+  return firstText === secondText
+    ? 0
+    : firstText > secondText
+      ? 1
+      : -1;
+}
+
 function getLinks() {
   const query = {
     'content_type': 'link'
   };
 
   return client.getEntries(query)
-    .then(response => response.items
-      .map(item => item.fields)
-      .sort((a, b) => a.text.toLowerCase() > b.text.toLowerCase())
-    )
+    .then(response => (
+      response.items
+        .map(item => item.fields)
+        .sort(compareText)
+    ))
     .catch(console.error);
 }
 
