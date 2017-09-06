@@ -16,16 +16,11 @@ function getLinks() {
   };
 
   return client.getEntries(query)
-    .then(response => response.items.map(item => item.fields))
+    .then(response => response.items
+      .map(item => item.fields)
+      .sort((a, b) => a.text.toLowerCase() > b.text.toLowerCase())
+    )
     .catch(console.error);
 }
-
-// function build() {
-//   console.log('this is function build');
-//   getLinks()
-//     .then(links => {
-//       console.log(links);
-//     });
-// }
 
 module.exports = getLinks;
